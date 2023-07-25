@@ -123,11 +123,11 @@ files_names
 #### merging Hourly activities data using excel and power query
 
 **step 1:** Gathering hourly datasets in the same workbook.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/1_gathering_houry_dataset_in_the_same_workbook.png)
+![](screenshots/1_gathering_houry_dataset_in_the_same_workbook.png)
 
 **step 2:** Merging Hourly Data Using Power Query in Excel.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/2_merging_the_hourly_data_power_query.png)
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/3_merge_hourly1.png)  
+![](screenshots/2_merging_the_hourly_data_power_query.png)
+![](screenshots/3_merge_hourly1.png)  
 **same thing was done to minutes data but before we need to clean the
 date columns of each file using power query**
 
@@ -135,21 +135,21 @@ date columns of each file using power query**
 
 step 1: Spliting the column by 11 characters. This will separate Date
 and Time.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/spliting_dates_by_number_to_separate_between_date_and_time.png)
+![](screenshots/spliting_dates_by_number_to_separate_between_date_and_time.png)
 
 step 2: Spliting the Date column by “/” Delimiter.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/spliting_dates_by_delimiter_to_separate_between_days_years_month.png)
+![](screenshots/spliting_dates_by_delimiter_to_separate_between_days_years_month.png)
 
 step 3: Changing the data type of the newly created columns to Whole
 number.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/changing_data_type_to_whole_number.png)
+![](screenshots/changing_data_type_to_whole_number.png)
 
 step 4: Merging Columns using “/”Separator.  
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/merging_the_splited_column.png)
+![](screenshots/merging_the_splited_column.png)
 
 step 5: merging date and_minutes columns and chanching the column type
 to date/time.
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/merging_date_and_minutes_column.png)
+![](screenshots/merging_date_and_minutes_column.png)
 
 **This our new dataset**
 
@@ -233,13 +233,13 @@ str(daily_act)
 
 #### Looking for nulls
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/looking_for_null_values_id.png)  
+![](screenshots/looking_for_null_values_id.png)  
 **N.B-1: repeating the same process for all columns**  
 **N.B-2: There are no nulls present in the columns**
 
 #### Looking for negative values
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/screenshots/no_negative_values.png)
+![](screenshots/no_negative_values.png)
 
 **There are no negative values present in the columns**  
 **Same thing was done to the rest of the dataset**
@@ -264,7 +264,7 @@ plot_2 <- ggplot(data = daily_act, aes(x= day_of_week, fill = day_of_week)) +
   theme_minimal()
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/Smart_Device_Usage_by_Weekdays.png)  
+![](plots/Smart_Device_Usage_by_Weekdays.png)  
 This bar chart depicts the distribution of smart device usage across
 weekdays, providing insights into the most and least popular days of
 device usage.
@@ -283,7 +283,7 @@ plot_3 <- ggplot(active_minutes_all, aes(x = activity_type, y = minutes)) +
   theme_minimal()
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/total_active_min_by_avtivity_type.png)  
+![](plots/total_active_min_by_avtivity_type.png)  
 The plot shows the total active minutes for different activity types.
 Users spend the most time in sedentary activities, followed by lightly
 active. Very active activities have the lowest total minutes.
@@ -344,7 +344,7 @@ plot_4 <- ggplot(data = total_calories_per_device,
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/total_calories_burned_per_device.png)  
+![](plots/total_calories_burned_per_device.png)  
 The chart provides an overview of how many calories each device has
 burned, allowing easy comparison to identify devices with higher or
 lower calorie burning patterns.
@@ -356,7 +356,7 @@ plot_5 <- ggplot(data = hourly_act, aes(x= time_period, fill = time_period)) +
   theme_minimal()
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/smart_device_usage_by_time_periode.png)  
+![](plots/smart_device_usage_by_time_periode.png)  
 This bar chart depicts the distribution of smart device usage across the
 periods of the day, providing insights into the most and least popular
 time periods of device usage.  
@@ -379,7 +379,7 @@ plot_6 <- ggplot(calories_by_timeperiod, aes(x = time_period, y = total_calories
   theme(legend.position = "none")
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/Total_Calories_Burned_by_Time_Period.png)  
+![](plots/Total_Calories_Burned_by_Time_Period.png)  
 Total Steps Over Time by Time Period.
 
 ``` r
@@ -392,7 +392,7 @@ plot_7 <- ggplot(hourly_act, aes(x = activity_hour, y = total_steps, color = tim
   theme_minimal()
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/total_steps_over_time_by_time_period.png)  
+![](plots/total_steps_over_time_by_time_period.png)  
 People are more likely to walk in afternoons and mornings.
 
 ``` r
