@@ -419,7 +419,7 @@ plot_8 <- ggplot(data = sleep_day)+
   theme_minimal()
 ```
 
-![](C:/Users/isach/OneDrive/Bureau/projects/Bellabeat/plots/total_in_bed_vs_total_asleep.png)
+![](plots/total_in_bed_vs_total_asleep.png)
 
 ``` r
 correlation_coefficient <- cor(sleep_day$total_min_asleep, sleep_day$total_time_in_bed)
